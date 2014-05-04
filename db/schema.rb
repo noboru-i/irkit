@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140504132452) do
+ActiveRecord::Schema.define(version: 20140504170128) do
+
+  create_table "commands", force: true do |t|
+    t.string   "name"
+    t.text     "json"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
