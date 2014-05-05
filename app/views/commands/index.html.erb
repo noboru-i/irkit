@@ -17,7 +17,7 @@
       <tr>
         <td><%= command.id %></td>
           <td><%= command.name %></td>
-          <td><%= command.json %></td>
+          <td><%= truncate(command.json) %></td>
         <td><%=l command.created_at, format: :long %></td>
         <td>
           <%= link_to command_path(command), :class => 'btn btn-xs', :title => "#{ t('.show', :default => t('helpers.links.show')) }" do %>
