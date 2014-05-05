@@ -10,6 +10,7 @@
     <div class="col-md-10">
       <%= f.text_field :json, :class => 'text_field form-control' %>
     </div>
+    <%= link_to '取得', '#', class: 'btn btn-primary js-get-ir' %>
   </div>
 
   <div class="form-group">
@@ -19,4 +20,22 @@
                   commands_path, :class => 'btn btn-default' %>
     </div>
   </div>
+
+<script>
+$(document).on('click', '.js-get-ir', function(e){
+  e.preventDefault();
+  $.ajax({
+    type: 'GET',
+    url: '<%= irkit_get_path %>',
+    success: function(data) {
+      console.log(data);
+      if (data.json) {
+        $('#command_json').val(data.json);
+      } else {
+        alrt('取得できませんでした。');
+      }
+    }
+  });
+});
+</script>
 <% end %>

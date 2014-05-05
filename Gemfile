@@ -44,3 +44,6 @@ gem 'devise', '~> 3.2.4'
 # bootstrap
 gem 'bootstrap-sass', '~> 3.1.1.1'
 gem 'bootstrap-sass-extras', '~> 0.0.6'
+
+# IRKit
+gem 'irkit'

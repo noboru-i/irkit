@@ -1,2 +1,18 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>IRKit管理</h1>
+
+<div>
+  <% @commands.each do |command| %>
+    <%= link_to command.name, '#', class: 'btn btn-primary', data: {command: command.id} %>
+  <% end %>
+</div>
+
+<script>
+$(document).on('click', '.btn', function(e){
+  e.preventDefault();
+  $.ajax({
+    type: 'POST',
+    url: '<%= irkit_post_path %>',
+    data: {command_id: $(this).data('command')}
+  });
+});
+</script>
