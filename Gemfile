@@ -12,7 +12,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -30,10 +30,7 @@ gem 'spring',        group: :development
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'unicorn'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
@@ -47,3 +44,13 @@ gem 'bootstrap-sass-extras', '~> 0.0.6'
 
 # IRKit
 gem 'irkit'
+
+# Use Capistrano for deployment
+group :development do
+  gem 'net-ssh', '~>2.6.8'
+  gem 'capistrano', '~>2.0'
+  gem 'capistrano-unicorn', :require => false
+  gem 'capistrano-ext'
+  gem 'capistrano-rbenv'
+  gem 'capistrano_rsync_with_remote_cache'
+end
