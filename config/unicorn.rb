@@ -10,7 +10,7 @@ working_directory @dir
 preload_app true
 
 timeout 300
-listen 80
+listen 3000
 
 # ログ出力
 if ENV['RAILS_ENV'] == 'development'
