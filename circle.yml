@@ -1,3 +1,6 @@
 machine:
   ruby:
     version: 2.2.2
+test:
+  override:
+    - scripts/saddler.sh
