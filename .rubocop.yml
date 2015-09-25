@@ -1,0 +1,10 @@
+AllCops:
+  Exclude:
+    - db/schema.rb
+    - 'vendor/**/*'
+  RunRailsCops: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+
+Metrics/LineLength:
+  Max: 120

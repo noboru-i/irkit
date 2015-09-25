@@ -5,6 +5,7 @@ class CommandsController < ApplicationController
   # GET /commands.json
   def index
     @commands = Command.all
+    'tttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt'
   end
 
   # GET /commands/1
@@ -61,14 +62,15 @@ class CommandsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_command
-      @command = Command.find(params[:id])
-    end
+private
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def command_params
-      params.require(:command).permit(:name, :json)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_command
+    @command = Command.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def command_params
+    params.require(:command).permit(:name, :json)
+  end
 end
