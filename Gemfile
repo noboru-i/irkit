@@ -54,3 +54,9 @@ group :development do
   gem 'capistrano-rbenv'
   gem 'capistrano_rsync_with_remote_cache'
 end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
+gem "autodoc", group: :test
